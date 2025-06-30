@@ -1,0 +1,73 @@
+{% extends "app_name/base.html" %}
+{% block title %}Online Voting System{% endblock %}
+{% block content %}
+<br>
+
+<div class="jumbotron text-center animate__animated animate__fadeIn">
+  {% if messages %}
+    {% for message in messages %}
+      <div class="alert alert-success animate__animated animate__fadeInDown" role="alert">{{ message }}</div>
+    {% endfor %}
+  {% endif %}
+
+  <h1 class="display-4 mb-4 animate__animated animate__fadeInDown">
+    Welcome to our Secure Online Voting Platform
+  </h1>
+
+  <hr class="my-4 bg-dark" style="height: 2px; animation: growLine 1s ease-out;" />
+
+  <div class="d-flex justify-content-center mb-4">
+    <img
+      src="https://th.bing.com/th/id/OIP.WGpLPzuqnLKGp3jL4jsgvAHaF7?r=0&rs=1&pid=ImgDetMain&cb=idpwebpc2"
+      alt="Ballot Box"
+      class="rounded shadow-lg animate__animated animate__zoomIn"
+      width="300"
+      height="300"
+    />
+  </div>
+
+  <hr class="my-5 bg-dark" style="height: 2px; animation: growLine 1s ease-out;" />
+
+  <div class="lead animate__animated animate__fadeInUp" style="animation-delay: 0.3s;">
+    <p>This is a simple voting system where you can surely vote for your favourite candidate.</p>
+    <p>Admin can add candidates and post the election.</p>
+    <p>Users can cast their vote securely and efficiently.</p>
+  </div>
+</div>
+
+<!-- Animate.css CDN -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+
+<!-- Custom Styles -->
+<style>
+  body {
+    background: linear-gradient(45deg, #6ef195, #00e3fd);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  @keyframes growLine {
+    from {
+      width: 0;
+      opacity: 0;
+    }
+    to {
+      width: 100%;
+      opacity: 1;
+    }
+  }
+
+  .jumbotron {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    margin: auto;
+    max-width: 900px;
+  }
+</style>
+{% endblock %}
